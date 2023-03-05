@@ -44,7 +44,7 @@ for i in range(1000):
         # switch back to the first tab
         browser.switch_to.window(browser.window_handles[0])
 
-    browser.execute_script("window.scrollBy(0, 100);")
+    browser.execute_script("window.scrollBy(0, 75);")
     # wait for 5 seconds
     time.sleep(2)
 
