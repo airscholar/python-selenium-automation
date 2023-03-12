@@ -11,14 +11,14 @@ service = webdriver.chrome.service.Service(ChromeDriverManager().install())
 
 browser = webdriver.Chrome(service=service, options=options)
 
-for i in range(5000):
-    browser.get("https://sample.com")
+for i in range(1000):
+    browser.get("https://voting-url.com")
 
     wait = WebDriverWait(browser, 10)
-    element = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'sample')]")))
+    element = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Sample User')]")))
     element.click()
 
-    element = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'sample')]")))
+    element = wait.until(EC.element_to_be_clickable((By.XPATH, "//*[contains(text(), 'Vote')]")))
     element.click()
 
     try:
